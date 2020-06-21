@@ -27,7 +27,7 @@ class Inputs extends Component {
     }
 
     register = (email, password, intro) => {
-        alert('email:' + email + '\npassword:' + password + '\nintro:' + intro)
+        alert('email' + email + '\npassword' + password + '\nintro' + intro)
     }
   
     render() {
@@ -89,7 +89,7 @@ class Inputs extends Component {
             />
 
             <TouchableOpacity
-                style = {style.submitButton}
+                style = {StyleSheet.submitButton}
                 onPress = {
                     () => this.register(this.state.email, this.state.password, this.state.intro)
                 }
