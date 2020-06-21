@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import { Text, View, StyleSheet,Alert } from 'react-native'
 
-class SiteNameComponent extends Component{
+export default class SiteNameComponent extends Component{
     constructor(props){
         super(props)
         this.state = {name: props.name}
     }
 
     updateState = () => {
-        const name = this.state.name == 'Tong is cool' ? 'Tong is not cool': 'Tong is cool'
+        const name = this.state.name = 'Tong is cool' ? 'Tong is not cool': 'Tong is cool'
         this.setState({
             name: name
         })
@@ -18,7 +18,7 @@ class SiteNameComponent extends Component{
         const {name} = this.state
         return (
             <View>
-                <Text onPress = {this.updateState}>{name}</Text>
+                <Text onPress = {this.updateState}></Text>
             </View>
         )
     }
