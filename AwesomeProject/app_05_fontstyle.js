@@ -1,10 +1,10 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, {Component} from 'react'
+import { View, Text, Image, StyleSheet } from 'react-native'
 
 const App = () =>{
     return (
-        <View style = {styles.container}>
-            <Text style = {styles.text}>
+        <View style = {Styles.container}>
+            <Text style = {Styles.text}>
                 <Text style = {styles.capitalLetter}>
                     Tong
                 </Text>
