@@ -18,16 +18,16 @@ const App = () => {
                 {text: 'Yes', onPress: () => showTip()},
                 {text: 'No', style: 'cancel'}
             ],
-            // {cancelable: false}
+            {cancelable: false}
         )
     }
 
     return(
         <View style={{alignItems: "center"}}>
-            <TouchableOpacity onPress = {showAlert1} style = {style.button}>
+            <TouchableOpacity onPress = {showAlert1} style = {StyleSheet.button}>
                 <Text>send</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress = {showAlert2} style = {style.button}>
+            <TouchableOpacity onPress = {showAlert2} style = {StyleSheet.button}>
                 <Text>delete</Text>
             </TouchableOpacity>
         </View>
