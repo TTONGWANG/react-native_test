@@ -9,31 +9,9 @@
   dependencies:
     "@babel/highlight" "^7.10.3"
 
-"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.7.5":
+"@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.10.3", "@babel/core@^7.7.5":
   version "7.10.3"
   resolved "https://registry.npm.taobao.org/@babel/core/download/@babel/core-7.10.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fcore%2Fdownload%2F%40babel%2Fcore-7.10.3.tgz#73b0e8ddeec1e3fdd7a2de587a60e17c440ec77e"
-  integrity sha1-c7Do3e7B4/3Xot5YemDhfEQOx34=
-  dependencies:
-    "@babel/code-frame" "^7.10.3"
-    "@babel/generator" "^7.10.3"
-    "@babel/helper-module-transforms" "^7.10.1"
-    "@babel/helpers" "^7.10.1"
-    "@babel/parser" "^7.10.3"
-    "@babel/template" "^7.10.3"
-    "@babel/traverse" "^7.10.3"
-    "@babel/types" "^7.10.3"
-    convert-source-map "^1.7.0"
-    debug "^4.1.0"
-    gensync "^1.0.0-beta.1"
-    json5 "^2.1.2"
-    lodash "^4.17.13"
-    resolve "^1.3.2"
-    semver "^5.4.1"
-    source-map "^0.5.0"
-
-"@babel/core@^7.10.3":
-  version "7.10.3"
-  resolved "https://registry.npm.taobao.org/@babel/core/download/@babel/core-7.10.3.tgz?cache=0&sync_timestamp=1592600125739&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fcore%2Fdownload%2F%40babel%2Fcore-7.10.3.tgz#73b0e8ddeec1e3fdd7a2de587a60e17c440ec77e"
   integrity sha1-c7Do3e7B4/3Xot5YemDhfEQOx34=
   dependencies:
     "@babel/code-frame" "^7.10.3"
@@ -697,16 +675,9 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.3", "@babel/runtime@^7.8.4":
   version "7.10.3"
   resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.10.3.tgz?cache=0&sync_timestamp=1592601015947&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
-  integrity sha1-Zw0AJlWnw2ZUDGf2/TNCzQlQA2Q=
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.10.3":
-  version "7.10.3"
-  resolved "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
   integrity sha1-Zw0AJlWnw2ZUDGf2/TNCzQlQA2Q=
   dependencies:
     regenerator-runtime "^0.13.4"
@@ -1025,6 +996,13 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
+
+"@react-native-community/async-storage@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.npm.taobao.org/@react-native-community/async-storage/download/@react-native-community/async-storage-1.11.0.tgz#bf81b8813080846f150c67f531987c429b442166"
+  integrity sha1-v4G4gTCAhG8VDGf1MZh8QptEIWY=
+  dependencies:
+    deep-assign "^3.0.0"
 
 "@react-native-community/cli-debugger-ui@^4.9.0":
   version "4.9.0"
@@ -2277,6 +2255,13 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
+deep-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/deep-assign/download/deep-assign-3.0.0.tgz#c8e4c4d401cba25550a2f0f486a2e75bc5f219a2"
+  integrity sha1-yOTE1AHLolVQovD0hqLnW8XyGaI=
+  dependencies:
+    is-obj "^1.0.0"
+
 deep-is@^0.1.3, deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.npm.taobao.org/deep-is/download/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
@@ -3513,6 +3498,11 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npm.taobao.org/is-number/download/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=
+
+is-obj@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/is-obj/download/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
+  integrity sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableHighlight, Alert,TextInput } from 'react-native'
-import {AsyncStorage} from 'react-native'
-// import AsyncStorage from '@react-native-community/async-storage'
+// import {AsyncStorage} from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 
 export default class App extends Component {
     state = {
         'name': 'Tong',
-        'inputText': 'null'
+        'inputText': 'hi'
     }
 
      readName = async() =>{
