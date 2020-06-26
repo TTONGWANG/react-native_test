@@ -1,99 +1,45 @@
-import React, {Component} from 'react';
-import {
-    StyleSheet,
-    Text,
-    Image,
-    View
-} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 
-let request_url = 'https://facebook.github.io/react-native/movies.json'
-                  
-
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            movies: null
-        }
-
+class App extends Component {
+    state = {
+        hidden: false,
+        barStyle: 'light-content'
     }
 
-    componentDidMount(){
-        this.fetchData();
-        
+    changeHidden = () => {
+        let hidden = this.state.hidden ? false : true
+        this.setState({hidden: hidden})
     }
-
-    fetchData=()=>{
-        return fetch(request_url)
-        .then((response) => 
-            response.json()
-        )
-        .then((responseData) => {
-           
-            this.setState({
-                movies: responseData.movies
-            })
-  
-        })
-        .catch((error) => console.log(error))
+    //.............................
+    changeBarStyle = () => { 
+        let barStyle =this.state.barStyle == 'light-content' ? 'dark-content' : 'light-content'
+        this.setState({barStyle: barStyle})
     }
 
     render(){
-        if(!this.state.movies){
-            return this.renderLoadingView();
-        }
-        var movie = this.state.movies[0];
-        
-        return this.renderMovie(movie)
-    }
-
-    renderLoadingView(){
         return(
-            <View style = {style.container}>
-                <Text>Loading.....</Text>
+            <View>
+                <StatusBar barStyle = {this.state.barStyle} hidden = {this.state.hidden} />
+                <TouchableOpacity style = {style.button} onPress = {this.changeHidden}>
+                    <Text>显示或隐藏</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style = {style.button} onPress = {this.changeBarStyle}>
+                    <Text>改变颜色</Text>
+                </TouchableOpacity>
             </View>
         )
     }
-
-    renderMovie(movie) {
-        return (
-           
-                <View style = {style.container}>
-                    {/* <Image 
-                        style = {style.thumbnail}
-                        source = {{uri: movie.posters.thumbnail}}
-                    /> */}
-
-                <View style = {style.rightContainer}>
-                    <Text style = {style.title}>{movie.title}</Text>
-                    <Text style = {style.year}>{movie.releaseYear}</Text>
-                </View>
-                </View>
-        ) 
-    }
 }
 
+export default App;
+
 const style = StyleSheet.create({
-    container:{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
-    },
-    thumbnail: {
+    button:{
+        backgroundColor: '#4ba37b',
         width: 100,
-        height: 80
-    },
-    rightContainer:{
-        flex: 1
-    },
-    title: {
-        fontSize: 20,
-        marginBottom: 8,
-        textAlign: 'center'
-    },
-    year: {
-        textAlign: 'center'
+        borderRadius: 50,
+        alignItems: 'center',
+        marginTop: 100
     }
 })

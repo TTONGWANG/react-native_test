@@ -6,7 +6,7 @@ import {
     View
 } from 'react-native';
 
-var request_url = "https://raw.githubusercontent.com/facebook/react-native/0.51-stable/docs/MoviesExample.json";
+let request_url = 'https://facebook.github.io/react-native/movies.json'
                   
 
 export default class App extends Component {
@@ -20,25 +20,30 @@ export default class App extends Component {
 
     componentDidMount(){
         this.fetchData();
+        
     }
 
     fetchData=()=>{
-        fetch(request_url)
-        .then((response) => response.json())
+        return fetch(request_url)
+        .then((response) => 
+            response.json()
+        )
         .then((responseData) => {
+           
             this.setState({
                 movies: responseData.movies
             })
+  
         })
-        .catch(() => console.log("Can’t get result"))
+        .catch((error) => console.log(error))
     }
-
 
     render(){
         if(!this.state.movies){
             return this.renderLoadingView();
         }
         var movie = this.state.movies[0];
+        
         return this.renderMovie(movie)
     }
 
@@ -54,14 +59,14 @@ export default class App extends Component {
         return (
            
                 <View style = {style.container}>
-                    <Image 
+                    {/* <Image 
                         style = {style.thumbnail}
                         source = {{uri: movie.posters.thumbnail}}
-                    />
+                    /> */}
 
                 <View style = {style.rightContainer}>
                     <Text style = {style.title}>{movie.title}</Text>
-                    <Text style = {style.year}>{movie.year}</Text>
+                    <Text style = {style.year}>{movie.releaseYear}</Text>
                 </View>
                 </View>
         ) 
